@@ -29,7 +29,7 @@ passport.use(
       });
 
       if (existingUser) {
-        done(null, existingUser);
+        return done(null, existingUser);
       }
 
       const user = await new User({
